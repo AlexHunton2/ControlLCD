@@ -1,0 +1,8 @@
+#include "ControlLCD.h"
+
+void setup() {
+  Serial.begin(9600);
+  ControlLCD lcd(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13); //RS, RW, E DATA PINS FROM 0-7
+  lcd.start();
+  lcd.writeString("Hello, world!");
+}
